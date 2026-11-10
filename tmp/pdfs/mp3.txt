@@ -1,0 +1,59 @@
+            CS 474: Object Oriented Programming Languages and Environments
+                                        Fall 2026
+
+                                                First C++ project
+
+                                Due time: 11:59 pm on Sunday 11/15/2026
+                      Copyright © Ugo Buy, 2026. All rights reserved.
+The text below cannot be copied, distributed or reposted without the copyright owners’ written
+                                           consent.
+
+
+     In this project you will design and code a class called SequenceableCollection that stores integer numbers in
+C++. This class combines the advantage of arrays (e.g., direct element access) with the advantage of linked lists
+(e.g., variable size). This class initially allocates a region of 8 contiguous integer elements, none of which are
+initially used as sequence elements (i.e., integer values). (Use a dynamically allocated integer array for this initial
+region.) You can insert up to 8 integers in this initial region of the sequence. When a ninth integer should be
+inserted but the initial region is full, a new region of double size (e.g., 16 elements) is allocated dynamically; the
+data originally stored in the sequenceable collection will be copied to the new region and the ninth element will be
+added.
+     Your implementation must satisfy the contiguous storage requirement. The elements inserted in Sequence-
+ableCollection must be stored contiguously in the allocated storage region at all times and regardless of region
+size.
+     To implement class SequenceableCollection, declare two instance variables, called start and end, to indicate
+the starting and ending indices of region positions that are used for storing elements added to the sequence. Initially,
+set start to 3 and end to 2 to indicate that the SequenceableCollection contains no elements. When the first
+element is added, place the element at position 3 in the region and increment end to 3. (This will indicate that
+the collection holds just one integer at position 3.) Next, you may add an element at position 2 or 4, depending on
+your choice, and so on. Your SequenceableCollection class must specifically support the following protocol. (All
+the methods below should be public, unless explicitly stated otherwise.)
+     You are responsible for the following items.
+   1. A refined spec for your project. In the refined spec, make sure to spell out the exact API of your class. Make
+      sure to include enough getters and setters for clients to use your class effectively. Also, in your refined spec
+      describe the functionality for managing reallocations doubling the size of the region when needed.
+   2. The C++ code for implementing your spec.
+   3. A brief prerecorded video in which you explain how your code works. The maximum duration of the video
+      is 300 seconds.
+
+   4. A document answering the following questions on your use of LLMs. The document should not exceed one
+      page.
+        (a) List the LLM or LLMs that you used for this project.
+       (b) Did you use an LLM for refining the spec or project code or both?
+        (c) What kind of prompting did you use for LLM? (E.g., one of zero-shot prompting; few-shot prompting;
+            chain of thought prompting).
+       (d) Rank on a Likert scale the results return by each LLM that you used (5–LLM produced exact results;
+           4–Minor corrections applied to LLM results; 3–Major corrections applied; 2–Most LLM output was
+           unhelpful; 1–LLM output did not help at all.)
+    You are required to use LLMs for this assignment. Your submission will be graded according to the following
+criteria:
+   1. The completeness of the specs.
+
+   2. Code compliance with your specs.
+   3. Accuracy of your video
+   4. Ability to use LLMs effectively and assess LLM results
+
+You must work alone on this project. Your project code should be in a special zip archive called xxx yyy mp3.zip,
+where xxx and yyy denote your first and last names. The archive will contain four items: (1) your revised spec, (2)
+zipped C++ project, (3) short video, and (4) answers to the questions on LLM use. Submit the archive using the
+submit link in the assignment page of the Blackboard course web site. No late submissions will be accepted.
+
